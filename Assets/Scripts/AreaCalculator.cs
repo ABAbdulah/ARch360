@@ -35,7 +35,7 @@ public class AreaCalculator : MonoBehaviour
 
     void CalculateAndDisplayArea()
     {
-        float area = CalculateTriangleArea(points[0], points[1], points[2]); // For simplicity
+        float area = CalculateTriangleArea(points[0], points[1], points[2]); // For simplicity i will create UI
         areaText.text = $"Area: {area:F2} sq units";
         areaText.transform.position = (points[0] + points[1] + points[2]) / 3;
     }
@@ -43,5 +43,7 @@ public class AreaCalculator : MonoBehaviour
     float CalculateTriangleArea(Vector3 p1, Vector3 p2, Vector3 p3)
     {
         return 0.5f * Vector3.Cross(p2 - p1, p3 - p1).magnitude;
+ 
     }
-}
+} 
+ 
